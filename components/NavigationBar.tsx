@@ -1,37 +1,50 @@
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <nav className="bg-gray-800 p-6">
-      <div className="container mx-auto flex items-center justify-between">
+    <nav className="bg-neutral-900 p-2">
+      <div className="container mx-auto flex items-center justify-between font-anton">
         <Link href="/" className="text-white mr-6 hover:text-gray-400">
-          Avo
+          <Image
+            src="/logo.png"
+            width={90}
+            height={12}
+            alt="logo"
+            className="rounded"
+          />
         </Link>
         <div className="hidden md:block">
           <Link
             href="/keyboards"
-            className="text-white mr-6 hover:text-gray-400"
+            className="text-white text-l mr-6 font-bold text-underline transition-colors duration-300 hover:text-underline-current hover:bg-teal-900"
           >
             Keyboards
           </Link>
-          <Link href="/mice" className="text-white mr-6 hover:text-gray-400">
+          <Link
+            href="/mice"
+            className="text-white text-l mr-6 font-bold text-underline transition-colors duration-300 hover:text-underline-current hover:bg-teal-900"
+          >
             Mice
           </Link>
           <Link
             href="/headsets"
-            className="text-white mr-6 hover:text-gray-400"
+            className="text-white text-l mr-6 font-bold text-underline transition-colors duration-300 hover:text-underline-current hover:bg-teal-900"
           >
             Headsets
           </Link>
           <Link
             href="/mousepads"
-            className="text-white mr-6 hover:text-gray-400"
+            className="text-white text-l mr-6 font-bold text-underline transition-colors duration-300 hover:text-underline-current hover:bg-teal-900"
           >
             Mousepads
           </Link>
-          <Link href="/contact" className="text-white mr-6 hover:text-gray-400">
+          <Link
+            href="/contact"
+            className="text-white text-l mr-6 font-bold text-underline transition-colors duration-300 hover:text-underline-current hover:bg-teal-900"
+          >
             Contact
           </Link>
         </div>
