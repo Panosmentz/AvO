@@ -93,17 +93,17 @@ function Footer() {
             </h6>
             <p className="mb-4">
               <a href="#!" className="text-white">
-                Pricing
+                Shipping
               </a>
             </p>
             <p className="mb-4">
               <a href="#!" className="text-white">
-                Settings
+                Returns
               </a>
             </p>
             <p className="mb-4">
               <a href="#!" className="text-white">
-                Orders
+                Warranty
               </a>
             </p>
             <p>

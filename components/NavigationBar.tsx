@@ -1,13 +1,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { UserIcon } from "@heroicons/react/24/solid";
+import { ShoppingCartIcon } from "@heroicons/react/24/outline";
 
 const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <nav className="bg-neutral-900 p-2">
       <div className="container mx-auto flex items-center justify-between font-anton">
-        <Link href="/" className="text-white mr-6 hover:text-gray-400">
+        <Link href="/" className="mr-6 text-white hover:text-gray-400">
           <Image
             src="/logo.png"
             width={90}
@@ -19,36 +22,44 @@ const NavigationBar = () => {
         <div className="hidden md:block">
           <Link
             href="/keyboards"
-            className="text-white mr-6 px-3 py-3 hover-underline-animation"
+            className="hover-underline-animation mr-6 px-3 py-3 text-white"
           >
             Keyboards
           </Link>
           <Link
             href="/mice"
-            className="text-white mr-6 px-3 py-3 hover-underline-animation"
+            className="hover-underline-animation mr-6 px-3 py-3 text-white"
           >
             Mice
           </Link>
           <Link
             href="/headsets"
-            className="text-white mr-6 px-3 py-3 hover-underline-animation"
+            className="hover-underline-animation mr-6 px-3 py-3 text-white"
           >
             Headsets
           </Link>
+        </div>
+        <div className="hidden md:block">
           <Link
-            href="/mousepads"
-            className="text-white mr-6 px-3 py-3 hover-underline-animation"
+            href="/account"
+            className="hover-underline-animation mr-6 px-3 py-3 text-white"
           >
-            Mousepads
+            <UserIcon className="h-5 w-5 text-white" />
+          </Link>
+          <Link
+            href="/cart"
+            className="hover-underline-animation mr-6 px-3 py-3 text-white"
+          >
+            <ShoppingCartIcon className="h-5 w-5 text-white" />
           </Link>
         </div>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`md:hidden rounded-full focus:outline-none focus:shadow-outline-blue`}
+          className={`focus:shadow-outline-blue rounded-full focus:outline-none md:hidden`}
         >
           <svg
-            className="w-6 h-6"
+            className="h-6 w-6"
             stroke="white"
             fill="none"
             viewBox="0 0 24 24"
@@ -64,15 +75,15 @@ const NavigationBar = () => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } md:hidden absolute right-0 top-0 w-full h-full py-2 bg-black rounded-lg shadow-xl flex justify-center align-center`}
+          } align-center absolute right-0 top-0 flex h-full w-full justify-center rounded-lg bg-black py-2 shadow-xl md:hidden`}
         >
           <div className="mt-16">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`md:hidden rounded-full focus:outline-none focus:shadow-outline-blue absolute right-10 top-10`}
+              className={`focus:shadow-outline-blue absolute right-10 top-10 rounded-full focus:outline-none md:hidden`}
             >
               <svg
-                className="w-6 h-6 text-white"
+                className="h-6 w-6 text-white"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -88,39 +99,32 @@ const NavigationBar = () => {
             </button>
             <div className="flex flex-col items-center ">
               <Link
-                href="/home"
-                className="px-4 py-2 hover-underline-animation"
+                href="/"
+                className="hover-underline-animation px-4 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/keyboards"
-                className="px-4 py-2 hover-underline-animation"
+                className="hover-underline-animation px-4 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Keyboards
               </Link>
               <Link
                 href="/mice"
-                className="px-4 py-2 hover-underline-animation"
+                className="hover-underline-animation px-4 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Mice
               </Link>
               <Link
                 href="/headsets"
-                className="px-4 py-2 hover-underline-animation"
+                className="hover-underline-animation px-4 py-2"
                 onClick={() => setIsOpen(false)}
               >
                 Headsets
-              </Link>
-              <Link
-                href="/mousepads"
-                className="px-4 py-2 hover-underline-animation"
-                onClick={() => setIsOpen(false)}
-              >
-                Mousepads
               </Link>
             </div>
           </div>
