@@ -3,9 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { UserIcon } from "@heroicons/react/24/solid";
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import { useSelector } from "react-redux";
+import { selectBasketItems } from "../redux/basketSlice";
 
 const NavigationBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const items = useSelector(selectBasketItems);
 
   return (
     <nav className="bg-neutral-900 p-2">
@@ -47,10 +50,17 @@ const NavigationBar = () => {
             <UserIcon className="h-5 w-5 text-white" />
           </Link>
           <Link
-            href="/cart"
+            href="/checkout"
             className="hover-underline-animation mr-6 px-3 py-3 text-white"
           >
-            <ShoppingCartIcon className="h-5 w-5 text-white" />
+            <div className="relative cursor-pointer">
+              {items.length > 0 && (
+                <span className="absolute -right-1 -top-1 z-50 flex h-4 w-4 items-center justify-center rounded-full bg-gradient-to-r from-teal-500 to-violet-500 text-[10px] text-white">
+                  {items.length}
+                </span>
+              )}
+            </div>
+            <ShoppingCartIcon className="headerIcon" />
           </Link>
         </div>
 

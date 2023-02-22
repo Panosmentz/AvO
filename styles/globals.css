@@ -27,3 +27,15 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  .headerIcon {
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: all 0.2s ease;
+  }
+  
+  .headerIcon:hover {
+    opacity: 1;
+  }

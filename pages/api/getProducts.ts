@@ -2,6 +2,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { groq } from "next-sanity";
 import {sanityClient} from "../../sanity"
 
+//API route that handles fetch products from sanity
+
 const query = groq`*[_type == "product"]{
     _id,
     ...
@@ -16,6 +18,6 @@ export default async function handler (
 
 ) {
     const products = await sanityClient.fetch(query)
-    console.log(products)
+    //console.log(products)
     res.status(200).json({products})
 }
