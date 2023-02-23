@@ -10,6 +10,15 @@ import {
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
 import ListProducts from "../components/ListProducts";
+import { GetServerSideProps } from "next";
+import { fetchCategories } from "../utils/fetchCategories";
+import { fetchProducts } from "../utils/fetchProducts";
+import Product from "../components/Product";
+
+interface Props {
+  categories: Category[];
+  products: Product[];
+}
 
 const sortOptions = [
   { name: "Most Popular", href: "#", current: true },
@@ -43,8 +52,14 @@ function classNames(...classes: any) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Mice() {
+export default function Mice({ categories, products }: Props) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
+
+  const showProducts = (category: number) => {
+    return products
+      .filter((product) => product.category._ref === categories[category]._id)
+      .map((product) => <Product product={product} key={product._id} />);
+  };
 
   return (
     <div className="bg-white">
@@ -305,8 +320,8 @@ export default function Mice() {
               </form>
 
               {/* Product grid */}
-              <div className="lg:col-span-3  rounded-lg border-4 border-dashed border-gray-200 lg:h-full">
-                <ListProducts />
+              <div className="grid grid-cols-2  rounded-lg border-4 border-dashed border-gray-200  lg:col-span-3 ">
+                {showProducts(0)}
               </div>
             </div>
           </section>
@@ -315,3 +330,13 @@ export default function Mice() {
     </div>
   );
 }
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const categories = await fetchCategories();
+  const products = await fetchProducts();
+  return {
+    props: {
+      categories,
+      products,
+    },
+  };
+};

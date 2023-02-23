@@ -71,8 +71,8 @@ function classNames(...classes: any) {
 
 export default function Keyboards({ categories, products }: Props) {
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-  console.log("Categories: ", categories);
-  console.log("Products: ", products);
+  // console.log("Categories: ", categories);
+  // console.log("Products: ", products);
   const showProducts = (category: number) => {
     return products
       .filter((product) => product.category._ref === categories[category]._id)
