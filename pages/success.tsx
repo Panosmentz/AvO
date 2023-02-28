@@ -188,7 +188,7 @@ function Success({ products }: Props) {
                   <div className="flex justify-between text-sm">
                     <p className="text-[gray]">Subtotal</p>
                     <p className="font-medium">
-                      <Currency quantity={subtotal} />
+                      <Currency quantity={subtotal} currency="EUR" />
                     </p>
                   </div>
                   <div className="flex justify-between text-sm">
@@ -198,16 +198,16 @@ function Success({ products }: Props) {
                   <div className="flex justify-between text-sm">
                     <p className="text-[gray]">Shipping</p>
                     <p className="font-medium">
-                      <Currency quantity={20} currency="USD" />
+                      <Currency quantity={20} currency="EUR" />
                     </p>
                   </div>
                 </div>
                 <div className="flex justify-between pt-4">
                   <p>Total</p>
                   <p className="flex items-center gap-x-2 text-xs text-[gray]">
-                    USD
+                    EUR
                     <span className="text-xl font-medium text-black">
-                      <Currency quantity={subtotal + 20} />
+                      <Currency quantity={subtotal + 20} currency="EUR" />
                     </span>
                   </p>
                 </div>

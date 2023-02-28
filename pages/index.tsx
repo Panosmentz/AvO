@@ -15,11 +15,11 @@ const Home = () => {
         <div className="relative bg-gradient-to-tl from-violet-500 via-cyan-400 to-teal-800 px-6 lg:px-8">
           <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
             <div className="text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              <h1 className="mb-4 max-w-2xl text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl xl:text-6xl">
                 Welcome to AvO - where futuristic design meets top-notch
                 performance.
               </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mb-6 max-w-2xl font-light  text-gray-900 md:text-lg lg:mb-8 lg:text-xl">
                 Our gaming gear is designed to revolutionize the industry and
                 elevate your gaming experience. Dominate the competition with
                 customizable RGB lighting, advanced software, and ergonomic
@@ -134,9 +134,9 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="bg-black p-5">
+        <section className="bg-white p-5">
           <div className="flex items-center justify-center ">
-            <div className="mr-10  font-medium text-white ">
+            <div className="mr-10  font-medium text-black ">
               Free Shipping
               <div className="mt-2 flex justify-center">
                 <Image
@@ -144,11 +144,11 @@ const Home = () => {
                   width={50}
                   height={50}
                   alt="shipping"
-                  className="rounded bg-white"
+                  className="rounded "
                 />
               </div>
             </div>
-            <div className="mr-10 font-medium text-white">
+            <div className="mr-10 font-medium text-black">
               Free Returns
               <div className="mt-2 flex justify-center">
                 <Image
@@ -156,11 +156,11 @@ const Home = () => {
                   width={50}
                   height={50}
                   alt="returns"
-                  className="rounded bg-white"
+                  className="rounded"
                 />
               </div>
             </div>
-            <div className="mr-10 font-medium text-white">
+            <div className="mr-10 font-medium text-black">
               5 Years Warranty
               <div className="mt-2 flex justify-center">
                 <Image
@@ -168,11 +168,11 @@ const Home = () => {
                   width={50}
                   height={50}
                   alt="warranty"
-                  className="rounded bg-white"
+                  className="rounded"
                 />
               </div>
             </div>
-            <div className="font-medium text-white">
+            <div className="font-medium text-black">
               Secure Payments
               <div className="mt-2 flex justify-center">
                 <Image
@@ -180,7 +180,7 @@ const Home = () => {
                   width={50}
                   height={50}
                   alt="payment"
-                  className="rounded bg-white"
+                  className="rounded"
                 />
               </div>
             </div>

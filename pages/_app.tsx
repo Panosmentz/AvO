@@ -7,6 +7,7 @@ import { store } from "../redux/store";
 import { Toaster } from "react-hot-toast";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
+import Banner from "../components/Banner";
 
 function MyApp({ Component, pageProps }: AppProps) {
   let persistor = persistStore(store);
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <NavigationBar />
+        <Banner />
         <Toaster />
         <Component {...pageProps} />
         <Footer />

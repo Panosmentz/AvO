@@ -1,26 +1,25 @@
 import Newsletter from "./Newsletter";
 import Link from "next/link";
-import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className="divide-y">
+    <div>
       <Newsletter />
-      <footer className="divide-y px-4 dark:dark:bg-gray-800 dark:dark:text-gray-100">
+      <footer className="text-bold divide-y bg-gradient-to-tl from-violet-500 via-cyan-400 to-violet-500 px-4 text-black">
         <div className="container mx-auto flex flex-col justify-center space-y-8 py-10 lg:flex-row lg:space-y-0">
           <div className="grid grid-cols-3 gap-x-3 gap-y-8 text-sm sm:grid-cols-4 lg:w-2/3">
             <div className="space-y-3">
-              <h3 className="uppercase tracking-wide dark:dark:text-gray-50">
+              <h3 className="text-lg font-extrabold uppercase tracking-wide">
                 Company
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3 text-base font-semibold">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
+                  <a rel="noopener noreferrer" href="/privacy">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
+                  <a rel="noopener noreferrer" href="/terms">
                     Terms of Service
                   </a>
                 </li>
@@ -32,10 +31,10 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-3">
-              <h3 className="uppercase tracking-wide dark:dark:text-gray-50">
+              <h3 className="text-lg font-extrabold uppercase tracking-wide">
                 Orders
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-3 text-base font-semibold">
                 <li>
                   <a rel="noopener noreferrer" href="#">
                     Shipping
@@ -50,10 +49,12 @@ const Footer = () => {
             </div>
 
             <div className="space-y-3">
-              <h3 className="uppercase dark:dark:text-gray-50">Useful Links</h3>
-              <ul className="space-y-3">
+              <h3 className="text-lg font-extrabold uppercase tracking-wide">
+                Useful Links
+              </h3>
+              <ul className="space-y-3 text-base font-semibold">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
+                  <a rel="noopener noreferrer" href="/contact">
                     Contact
                   </a>
                 </li>
@@ -65,11 +66,14 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-3">
-              <div className="uppercase text-gray-50">Social media</div>
+              <div className="text-lg font-extrabold uppercase tracking-wide">
+                Social media
+              </div>
               <div className="flex justify-start space-x-3">
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  target="_blank"
+                  href="https://www.facebook.com/"
                   title="Facebook"
                   className="flex items-center p-1"
                 >
@@ -83,10 +87,11 @@ const Footer = () => {
                   </svg>
                 </a>
                 <a
-                  rel="noopener noreferrer"
-                  href="#"
+                  href="https://twitter.com/"
                   title="Twitter"
                   className="flex items-center p-1"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     viewBox="0 0 24 24"
@@ -98,7 +103,8 @@ const Footer = () => {
                 </a>
                 <a
                   rel="noopener noreferrer"
-                  href="#"
+                  target="_blank"
+                  href="https://www.instagram.com/"
                   title="Instagram"
                   className="flex items-center p-1"
                 >
@@ -115,7 +121,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-6 text-center text-sm dark:text-gray-400">
+        <div className="py-6 text-center text-sm font-semibold text-black">
           © 2023 AvO Gaming, Inc. | All Rights Reserved
         </div>
       </footer>

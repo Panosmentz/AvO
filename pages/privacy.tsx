@@ -3,9 +3,16 @@ import React from "react";
 export default function PrivacyPolicy() {
   return (
     <div className="bg-gray-800">
-      <div className="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-white">Privacy Policy</h1>
-        <div className="mt-8 rounded-lg bg-white p-6 shadow-lg">
+      <article className="mx-auto max-w-2xl space-y-12 px-6 py-24 dark:bg-gray-800 dark:text-gray-50">
+        <div className="mx-auto w-full space-y-4 text-center">
+          <h1 className="text-4xl font-bold leading-tight md:text-5xl">
+            Privacy Policy
+          </h1>
+          <p className="text-sm dark:text-gray-400">
+            <time>Feb 12th 2023</time>
+          </p>
+        </div>
+        <div className="dark:text-gray-100">
           <p className="mb-4">
             This Privacy Policy describes how our website collects, uses, and
             shares information about you when you visit or make a purchase from
@@ -97,7 +104,7 @@ export default function PrivacyPolicy() {
             us by e-mail at support@keyboardstore.com.
           </p>
         </div>
-      </div>
+      </article>
     </div>
   );
 }

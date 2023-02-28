@@ -319,7 +319,7 @@ export default function Headsets({ categories, products }: Props) {
               </form>
 
               {/* Product grid */}
-              <div className="grid grid-cols-2  rounded-lg border-4 border-dashed border-gray-200  lg:col-span-3 ">
+              <div className="grid grid-cols-1 gap-4 rounded-lg  sm:grid-cols-3 lg:col-span-3 ">
                 {showProducts(1)}
               </div>
             </div>
