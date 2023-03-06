@@ -14,6 +14,7 @@ import Currency from "react-currency-formatter";
 import { useMediaQuery } from "react-responsive";
 import Button from "../components/Button";
 import { fetchLineItems } from "../utils/fetchLineItems";
+import { urlFor } from "../sanity";
 //import { useSession } from "next-auth/react";
 
 interface Props {
@@ -162,14 +163,6 @@ function Success({ products }: Props) {
                       className="flex items-center space-x-4 text-sm font-medium"
                     >
                       <div className="relative flex h-16 w-16 items-center justify-center rounded-md border border-gray-300 bg-[#F1F1F1] text-xs text-white">
-                        <div className="relative h-7 w-7 animate-bounce rounded-md">
-                          <Image
-                            src="/logo.png"
-                            fill
-                            style={{ objectFit: "contain" }}
-                            alt="logo"
-                          />
-                        </div>
                         <div className="absolute -right-2 -top-2 flex h-5 w-5 items-center justify-center rounded-full bg-[gray] text-xs">
                           {product.quantity}
                         </div>
@@ -198,7 +191,7 @@ function Success({ products }: Props) {
                   <div className="flex justify-between text-sm">
                     <p className="text-[gray]">Shipping</p>
                     <p className="font-medium">
-                      <Currency quantity={20} currency="EUR" />
+                      <Currency quantity={0} currency="EUR" />
                     </p>
                   </div>
                 </div>
@@ -207,7 +200,7 @@ function Success({ products }: Props) {
                   <p className="flex items-center gap-x-2 text-xs text-[gray]">
                     EUR
                     <span className="text-xl font-medium text-black">
-                      <Currency quantity={subtotal + 20} currency="EUR" />
+                      <Currency quantity={subtotal} currency="EUR" />
                     </span>
                   </p>
                 </div>

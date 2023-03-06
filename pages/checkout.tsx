@@ -113,21 +113,6 @@ function Checkout() {
                   How would you like to pay?
                 </h4>
                 <div className="flex flex-col gap-4 md:flex-row">
-                  <div className="order-2 flex flex-1 flex-col items-center rounded-xl bg-gray-200 p-8 py-12 text-center">
-                    <h4 className="mb-4 flex flex-col text-xl font-semibold">
-                      <span>Pay Monthly</span>
-                      <span>with Apple Card</span>
-                      <span>
-                        $283.16/mo. at 0% APR<sup className="-top-1">◊</sup>
-                      </span>
-                    </h4>
-                    <Button title="Check Out with Apple Card Monthly Installments" />
-                    <p className="mt-2 max-w-[240px] text-[13px]">
-                      $0.00 due today, which includes applicable full-price
-                      items, down payments, shipping, and taxes.
-                    </p>
-                  </div>
-
                   <div className="flex flex-1 flex-col items-center space-y-8 rounded-xl bg-gray-200 p-8 py-12 md:order-2">
                     <h4 className="mb-4 flex flex-col text-xl font-semibold">
                       Pay in full

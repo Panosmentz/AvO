@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const AboutUs = () => {
+const About = () => {
   return (
     <div className="bg-gray-100">
       <Head>
@@ -86,4 +86,4 @@ const AboutUs = () => {
   );
 };
 
-export default AboutUs;
+export default About;
