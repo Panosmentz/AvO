@@ -3,7 +3,7 @@ export const fetchProducts = async () => {
 
     const data = await res.json()
     const products : Product[] = data.products
-
+console.log("products from fetchProducts.ts: ", products)
 
     return products
 }
