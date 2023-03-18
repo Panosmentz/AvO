@@ -332,6 +332,11 @@ export default function Headsets({ categories, products }: Props) {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const categories = await fetchCategories();
   const products = await fetchProducts();
+  console.log(
+    "Categories and products from headsets page:",
+    categories,
+    products
+  );
   return {
     props: {
       categories,
