@@ -9,7 +9,6 @@ import {
   PlusIcon,
   Squares2X2Icon,
 } from "@heroicons/react/20/solid";
-import ListProducts from "../components/ListProducts";
 import { GetServerSideProps } from "next";
 import { fetchCategories } from "../utils/fetchCategories";
 import { fetchProducts } from "../utils/fetchProducts";
