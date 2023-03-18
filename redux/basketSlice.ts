@@ -1,5 +1,5 @@
 //a slice is a "part" of a component
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice, createAction } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from './store'
 
@@ -10,6 +10,7 @@ export interface BasketState {
 const initialState: BasketState = {
   items: [],
 }
+export const clearBasket = createAction('basket/clear')
 
 export const basketSlice = createSlice({
   name: 'basket',
@@ -34,6 +35,11 @@ export const basketSlice = createSlice({
     }
     state.items = newBasket
    }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(clearBasket, (state) => {
+      state.items = initialState.items
+    })
   },
 })
 

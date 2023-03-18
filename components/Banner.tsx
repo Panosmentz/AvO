@@ -23,8 +23,8 @@ export default function Banner() {
           >
             <circle cx={1} cy={1} r={1} />
           </svg>
-          This is a personal project and the items, privacy policy and terms of
-          service on this website are NOT real. Payments are in Sandbox.
+          This is a personal project and the items on this website are NOT real.
+          Payments are in Sandbox.
         </p>
       </div>
       <div className="flex flex-1 justify-end">

@@ -5,7 +5,6 @@ import {
   selectBasketItems,
   selectBasketItemsTotal,
 } from "../redux/basketSlice";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/router";
 import Button from "../components/Button";
 import CheckoutProduct from "../components/CheckoutProduct";
@@ -71,10 +70,12 @@ function Checkout() {
           <p className="my-4">Free delivery and free returns.</p>
 
           {items.length === 0 && (
-            <Button
-              title="Continue Shopping"
+            <button
               onClick={() => router.push("/")}
-            />
+              className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-teal-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Continue Shopping
+            </button>
           )}
         </div>
 

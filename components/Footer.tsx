@@ -24,7 +24,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
+                  <a rel="noopener noreferrer" href="/about">
                     About
                   </a>
                 </li>
@@ -36,12 +36,12 @@ const Footer = () => {
               </h3>
               <ul className="space-y-3 text-base font-semibold">
                 <li>
-                  <a rel="noopener noreferrer" href="#">
+                  <a rel="noopener noreferrer" href="/shipping">
                     Shipping
                   </a>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
+                  <a rel="noopener noreferrer" href="/returns">
                     Returns
                   </a>
                 </li>
@@ -59,7 +59,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a rel="noopener noreferrer" href="#">
+                  <a rel="noopener noreferrer" href="/faq">
                     FAQ
                   </a>
                 </li>

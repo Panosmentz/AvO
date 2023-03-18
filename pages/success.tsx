@@ -15,6 +15,9 @@ import { useMediaQuery } from "react-responsive";
 import Button from "../components/Button";
 import { fetchLineItems } from "../utils/fetchLineItems";
 import { urlFor } from "../sanity";
+import { useDispatch } from "react-redux";
+import { clearBasket } from "../redux/basketSlice";
+
 //import { useSession } from "next-auth/react";
 
 interface Props {
@@ -22,6 +25,7 @@ interface Props {
 }
 
 function Success({ products }: Props) {
+  const dispatch = useDispatch();
   //console.log(products);
   const router = useRouter();
   const { session_id } = router.query;
@@ -35,6 +39,8 @@ function Success({ products }: Props) {
 
   useEffect(() => {
     setMounted(true);
+
+    dispatch(clearBasket());
   }, []);
 
   // showOrderSummary always true for desktop but only conditionally true for mobile
